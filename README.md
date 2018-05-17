@@ -4,7 +4,7 @@ is one of the first public-key cryptosystems and is widely used for secure data 
 ————By Wikipedia
 
 # Usage
-### read the file (run.py)
+### encode or decode the file (run.py)
 ```
 python3 run.py -f 32 README.md rm.encode.md rm.decode.md
 ```
