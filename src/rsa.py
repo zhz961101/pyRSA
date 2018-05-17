@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from mR import getLongPrimes
+from .mR import getLongPrimes
 import random
 
 # base func  Euclid...
+
+
 def _gcd(a, b):
     return b if a is 0 else _gcd(b % a, a)
 
@@ -41,7 +43,7 @@ class RSA:
     def __init__(self, SIZE=64):
         self.modulus, self.pubKey, self.prvKey = self.newKeys(SIZE + 1)
         self.bitWindow_len = int(SIZE / 4)
-        print("self.bitWindow_len", self.bitWindow_len)
+        # print("$py: self.bitWindow_len", self.bitWindow_len)
 
     @staticmethod
     def newKeys(size=64):
@@ -123,7 +125,7 @@ class RSA:
             handle = open(filename, 'wb')
             handle.write(bytes(data))
             handle.close()
-            print ('Save as to: ' + str(filename))
+            print ('$ py.RSA: Save as to: ' + str(filename))
         except BaseException as e:
             print (e)
 
@@ -139,7 +141,7 @@ class RSA:
         return res
 
     def showKey(self):
-        print (self.pubKey, self.prvKey, self.modulus)
+        print ("{", self.pubKey, self.prvKey, self.modulus, "}")
 
 
 if __name__ == '__main__':
